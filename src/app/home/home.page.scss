@@ -1,11 +1,7 @@
 #container {
   text-align: center;
+  margin-top: 20px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
 #container strong {
@@ -24,4 +20,21 @@
 
 #container a {
   text-decoration: none;
+}
+
+#textAreaContainer {
+  margin-inline: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#Textarea {
+  margin-top: 30px;
+
+  font-size: 30px;
+  text-align: end;
+}
+
+#grid {
+  margin-top: 20px;
 }

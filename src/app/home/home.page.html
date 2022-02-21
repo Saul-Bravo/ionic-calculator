@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Calculator
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,82 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Calculator</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-item id="textAreaContainer">
+      <ion-textarea auto-grow="false" id="Textarea">{{lastOperator}} {{lastNumber}}<br>{{operator}} {{operation}}</ion-textarea>
+    </ion-item>
+    <ion-grid id="grid">
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="deleteAll()">AC</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="deleteDigit()">DEL</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeOperator('%')">%</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeOperator('/')">/</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(7)">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(8)">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(9)">9</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeOperator('*')">X</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(4)">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(5)">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(6)">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeOperator('-')">-</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(1)">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(2)">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(3)">3</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeOperator('+')">+</ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="5">
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber(0)">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="typeNumber('.')">.</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="light" expand="block" size="large" (click)="equals()">=</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>
