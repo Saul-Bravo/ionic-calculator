@@ -14,22 +14,26 @@
   </ion-header>
 
   <div id="container">
-    <ion-item id="textAreaContainer">
+    <div id="screen">
+      <p style="color: #808080; margin-bottom: 20px; margin-top: 40px;">{{lastOperator}} {{lastNumber}}</p>
+      <p id="textAreaContainer">{{operator}} {{operation}}</p>
+    </div>
+    <!--<ion-item id="textAreaContainer">
       <ion-textarea auto-grow="false" id="Textarea">{{lastOperator}} {{lastNumber}}<br>{{operator}} {{operation}}</ion-textarea>
-    </ion-item>
+    </ion-item> -->
     <ion-grid id="grid">
       <ion-row>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="deleteAll()">AC</ion-button>
+          <ion-button color="danger" expand="block" size="large" (click)="deleteAll()">AC</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="deleteDigit()">DEL</ion-button>
+          <ion-button color="danger" expand="block" size="large" (click)="deleteDigit()">DEL</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="typeOperator('%')">%</ion-button>
+          <ion-button color="warning" expand="block" size="large" (click)="typeOperator('%')">%</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="typeOperator('/')">/</ion-button>
+          <ion-button color="warning" expand="block" size="large" (click)="typeOperator('/')">/</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -43,7 +47,7 @@
           <ion-button color="light" expand="block" size="large" (click)="typeNumber(9)">9</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="typeOperator('*')">X</ion-button>
+          <ion-button color="warning" expand="block" size="large" (click)="typeOperator('*')">*</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -57,7 +61,7 @@
           <ion-button color="light" expand="block" size="large" (click)="typeNumber(6)">6</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="typeOperator('-')">-</ion-button>
+          <ion-button color="warning" expand="block" size="large" (click)="typeOperator('-')">-</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -71,7 +75,7 @@
           <ion-button color="light" expand="block" size="large" (click)="typeNumber(3)">3</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="typeOperator('+')">+</ion-button>
+          <ion-button color="warning" expand="block" size="large" (click)="typeOperator('+')">+</ion-button>
         </ion-col>
       </ion-row>
       <ion-row>
@@ -82,7 +86,7 @@
           <ion-button color="light" expand="block" size="large" (click)="typeNumber('.')">.</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="light" expand="block" size="large" (click)="equals()">=</ion-button>
+          <ion-button color="warning" expand="block" size="large" (click)="equals()">=</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>

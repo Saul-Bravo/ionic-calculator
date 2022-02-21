@@ -29,10 +29,29 @@
 }
 
 #Textarea {
-  margin-top: 30px;
-
-  font-size: 30px;
+  font-size: 50px;
   text-align: end;
+}
+
+#screen {
+  height: 200px;
+  background-color: #dddd;
+  margin-inline: 12px;
+  padding-top: 30px;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+#screen p {
+  font-size: 50px;
+  text-align: right;
+  margin-right: 12px;
+  margin-top: 10px;
+  color: #000000;
+}
+
+#textAreaContainer {
+  color: #A9A9A9;
 }
 
 #grid {

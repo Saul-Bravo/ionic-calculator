@@ -49,43 +49,55 @@ export class HomePage {
     this.operator = '';
   }
 
+  addition(){
+    this.result = (this.firstNumber + this.secondNumber);
+    this.showResult();
+  }
+
+  substraction(){
+    this.result = (this.firstNumber - this.secondNumber);
+    this.showResult();
+  }
+
+  division(){
+    this.result = (this.firstNumber / this.secondNumber);
+    this.showResult();
+  }
+
+  multiplication(){
+    this.result = (this.firstNumber * this.secondNumber);
+    this.showResult();
+  }
+
+  residue(){
+    this.result = (this.firstNumber % this.secondNumber);
+    this.showResult();
+  }
+
+  showResult(){
+    this.operation = this.result.toString();
+    this.lastNumber = this.secondNumber.toString();
+    this.lastOperator = this.operator;
+    this.operator = '';
+  }
+
   equals(){
     this.secondNumber = Number(this.operation);
     switch (this.operator) {
       case '+':
-        this.result = (this.firstNumber + this.secondNumber);
-        this.operation = this.result.toString();
-        this.lastNumber = this.secondNumber.toString();
-        this.lastOperator = this.operator;
-        this.operator = '';
+        this.addition();
         break;
       case '-':
-        this.result = (this.firstNumber - this.secondNumber);
-        this.operation = this.result.toString();
-        this.lastNumber = this.secondNumber.toString();
-        this.lastOperator = this.operator;
-        this.operator = '';
+        this.substraction();
         break;
       case '/':
-        this.result = (this.firstNumber / this.secondNumber);
-        this.operation = this.result.toString();
-        this.lastNumber = this.secondNumber.toString();
-        this.lastOperator = this.operator;
-        this.operator = '';
+        this.division();
         break;
       case '%':
-        this.result = (this.firstNumber % this.secondNumber);
-        this.operation = this.result.toString();
-        this.lastNumber = this.secondNumber.toString();
-        this.lastOperator = this.operator;
-        this.operator = '';
+        this.residue();
         break;
       case '*':
-        this.result = (this.firstNumber * this.secondNumber);
-        this.operation = this.result.toString();
-        this.lastNumber = this.secondNumber.toString();
-        this.lastOperator = this.operator;
-        this.operator = '';
+        this.multiplication();
         break;
 
       default:
